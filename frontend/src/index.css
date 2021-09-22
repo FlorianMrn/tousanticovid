@@ -2,6 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  @font-face {
+    font-family: Marianne;
+    font-weight: 400;
+    src: url(./assets/fonts/Marianne-Regular.woff) format("woff"), url(./assets/fonts/Marianne-Regular.woff2) format("woff2");
+  }
+  @font-face {
+    font-family: Marianne;
+    font-weight: 700;
+    font-style: bold;
+    src: url(./assets/fonts/Marianne-Bold.woff) format("woff"), url(./assets/fonts/Marianne-Bold.woff2) format("woff2");
+  }
+  @font-face {
+    font-family: Marianne;
+    font-weight: 400;
+    font-style: italic;
+    src: url(./assets/fonts/Marianne-Regular_Italic.woff) format("woff"), url(./assets/fonts/Marianne-Regular_Italic.woff2) format("woff2");
+  }
+}
+
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
