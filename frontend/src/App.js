@@ -1,6 +1,9 @@
 import { useState } from 'react';
+import { Switch, Route } from 'react-router';
 import Nav from './components/Nav';
 import Home from './components/Home';
+import Footer from './components/Footer';
+import Faq from './components/Faq';
 
 function App() {
 
@@ -14,7 +17,11 @@ function App() {
   return (
     <div className="App relative">
       <Nav />
-      <Home handleCityChoice={handleCityChoice}/>
+        <Route exact path="/">
+          <Home handleCityChoice={handleCityChoice}/>
+        </Route>
+        <Route exact path="/faq" component={Faq} />
+      <Footer />
     </div>
   );
 }

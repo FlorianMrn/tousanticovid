@@ -40,6 +40,7 @@ module.exports = {
       'body': '14px',
       'secondaryBody': '12px',
       'placeholder': '12px',
+      'tinyText': '8px',
       'button': '10px',
     },
     extend: {
