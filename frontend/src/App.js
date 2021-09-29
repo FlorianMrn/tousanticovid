@@ -4,13 +4,13 @@ import Nav from './components/Nav';
 import Home from './components/Home';
 import Footer from './components/Footer';
 import Faq from './components/Faq';
+import Vaccination from './components/Vaccination';
 
 function App() {
 
   const [cityChoice, setCityChoice] = useState("");
 
   const handleCityChoice = (value) => {
-    console.log("hello", value)
     setCityChoice(value)
   };
 
@@ -21,6 +21,9 @@ function App() {
           <Home handleCityChoice={handleCityChoice}/>
         </Route>
         <Route exact path="/faq" component={Faq} />
+        <Route exact path="/vaccination">
+          <Vaccination cityChoice={cityChoice}/>
+        </Route>
       <Footer />
     </div>
   );

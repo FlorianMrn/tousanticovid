@@ -27,7 +27,7 @@ const Actualites = () => {
     };
 
     const handleDisplayActualite = (actu) => {
-        console.log("allo")
+
         actu.timeReading = getTimeReading(actu.text);
         setDisplayActualite(prevState => ({
             display : true,
@@ -96,7 +96,9 @@ const Actualites = () => {
                     </div>
                 </>
             }
-            {(displayActualite && displayActualite.display) && <SingleActualite actualite={displayActualite.actu} closeDisplayActualite={closeDisplayActualite} autresActualités={filteredArticles.slice(0, 5)} handleDisplayActualite={handleDisplayActualite}/>}
+            {displayActualite.display &&
+                <SingleActualite actualite={displayActualite.actu} closeDisplayActualite={closeDisplayActualite} autresActualités={filteredArticles.slice(0, 5)} handleDisplayActualite={handleDisplayActualite}/>
+            }
         </section>
     )
 };

@@ -6,12 +6,19 @@ import headerImage from '../../../assets/images/headerImage.svg';
 const Header = ({ handleCityChoice }) => {
 
     const [searchCity, setSearchCity] = useState("");
+    const [displayChoiceCities, setDisplayChoiceCities] = useState(false)
 
     const handleChange = (e) => {
+        setDisplayChoiceCities(true);
         setSearchCity(e.target.value);
     };
 
-    const filteredCities = cities.filter((citie) => citie.slug.includes(searchCity.toLowerCase()) || (citie.zip_code && citie.zip_code.includes(searchCity)));
+    const handleSubmit = (city) => {
+        setSearchCity(city.name + " " + city.zip_code)
+        setDisplayChoiceCities(false);
+    };
+
+    const filteredCities = cities.filter((citie) => citie.slug.includes(searchCity.toLowerCase()) || (citie.zip_code && citie.zip_code.includes(searchCity))).slice(0, 10);
 
     return (
         <header className="relative h-screen w-full bg-drapeauMob lg:bg-drapeau bg-cover flex items-center justify-center lg:justify-around">
@@ -28,12 +35,12 @@ const Header = ({ handleCityChoice }) => {
                     <div className="bg-white h-12 flex items-center justify-center px-2 absolute" >
                         <FiMapPin className="bg-white" size={24}/>
                     </div>
-                    {searchCity && 
+                    {displayChoiceCities && 
                         <ul className="absolute -bottom-40 w-72 p-2 h-40 bg-white rounded block overflow-y-scroll z-50">
                             {filteredCities.length > 0 ? 
                             
                             filteredCities.map((citie, index) => (
-                                <li key={index} className="py-2 border-b border-grey font-marianne" onClick={() => handleCityChoice(citie)}>{citie.name} {citie.zip_code}</li>
+                                <li key={index} className="py-2 border-b border-grey font-marianne cursor-pointer" onClick={() => handleSubmit(citie)}>{citie.name} {citie.zip_code}</li>
                             ))
                             : <p>Aucune ville trouvée</p>}   
                         </ul>

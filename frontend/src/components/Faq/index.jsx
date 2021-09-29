@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import infosData from '../../assets/others/infos.json';
 
 const Faq = () => {
-    const [infos, ] = ([infosData]);
+    const infos = infosData;
 
 
     return (

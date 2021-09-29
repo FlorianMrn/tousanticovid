@@ -1,13 +1,7 @@
 import axios from "axios";
 
-const axiosInstance = {
-    method: 'get',
-    url: `${process.env.REACT_APP_BASE_URL}articles/`,
-    headers: {}
-};
-
-export const getArticles = (setter) => {
-    axios(axiosInstance)
+export async function getArticles(setter) {
+    axios.get(`${process.env.REACT_APP_BASE_URL}articles/`)
         .then(function (response) {
             return setter(response.data);
         })
@@ -16,7 +10,7 @@ export const getArticles = (setter) => {
         });
 };
 
-export const getDiffHoursAndDays  = (dataDate) => {
+export async function getDiffHoursAndDays(dataDate) {
     const actualDate = new Date();
     const actualDay = actualDate.getDate();
     const actualHours = actualDate.getHours();
@@ -30,7 +24,7 @@ export const getDiffHoursAndDays  = (dataDate) => {
     return `Il y a ${actualDay - dataDay} ${(actualDay - dataDay) > 1 ? "jours" : "jour"}`;
 };
 
-export const getTimeReading = (text) => {
+export async function getTimeReading(text) {
     const readingTime = Math.round(text.split(" ").length / 250);
     return `${readingTime} ${readingTime <= 1 ? "minute" : "minutes"} de lecture`;
 };
