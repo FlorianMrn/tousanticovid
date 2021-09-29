@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import { Switch, Route } from 'react-router';
+import Nav from './components/Nav';
+import Home from './components/Home';
+import Footer from './components/Footer';
+import Faq from './components/Faq';
+import Vaccination from './components/Vaccination';
 
 function App() {
+
+  const [cityChoice, setCityChoice] = useState("");
+
+  const handleCityChoice = (value) => {
+    setCityChoice(value)
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.jsfffff</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App relative">
+      <Nav />
+        <Route exact path="/">
+          <Home handleCityChoice={handleCityChoice}/>
+        </Route>
+        <Route exact path="/faq" component={Faq} />
+        <Route exact path="/vaccination">
+          <Vaccination cityChoice={cityChoice}/>
+        </Route>
+      <Footer />
     </div>
   );
 }

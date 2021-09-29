@@ -1,0 +1,47 @@
+[
+    {
+        "title" : "Qu'est ce que la vaccination ?",
+        "label" : "info",
+        "text" : "La vaccination est un moyen simple, sûr et efficace de vous protéger des maladies dangereuses, avant d’être en contact avec ces affections. Elle utilise les défenses naturelles de l’organisme pour créer une résistance à des infections spécifiques et renforcer le système immunitaire. Les vaccins stimulent le système immunitaire pour créer des anticorps, de la même manière que s’il était exposé à la maladie."
+    },
+    {
+        "title" : "Quelles maladies les vaccins permettent d'éviter ?",
+        "label" : "info",
+        "text" : "Les vaccins protègent contre de nombreuses maladies, notamment : - Le cancer du col de l’utérus - Le choléra - La maladie à virus Ebola Toutes ces vaccinations ne sont pas forcément nécessaires dans votre pays. Certaines ne seront administrées qu’avant un voyage dans des zones à risque ou à des personnes exerçant des professions très exposées."
+    },
+    {
+        "title" : "Les vaccins sont-ils sûrs ?",
+        "label" : "info",
+        "text" : "Les vaccins sont sûrs et leurs effets secondaires sont en général mineurs et temporaires, comme un bras endolori ou une faible fièvre. Des effets indésirables plus sérieux sont possibles, mais extrêmement rares. Tout vaccin homologué subit une batterie de tests rigoureux tout au long des multiples phases des essais avant que son utilisation ne soit approuvée; il est ensuite réévalué régulièrement après son introduction. "
+    },
+    {
+        "title" : "Comment agit un vaccin ?",
+        "label" : "Comment",
+        "text" : "Les vaccins réduisent le risque de contracter une maladie en travaillant sur les défenses naturelles de l’organisme pour établir une protection. Les vaccins sont donc un moyen sûr et astucieux de produire une réponse immunitaire de l’organisme, sans provoquer de maladie.Le système immunitaire a de la mémoire. Une fois qu’il a été exposé à une ou plusieurs doses vaccinales, le sujet vacciné demeure protégé contre la maladie concernée."
+    },
+    {
+        "title" : "Qui peut se faire vacciner ?",
+        "label" : "Qui",
+        "text" : "Presque tout le monde. Toutefois, à cause d’affections médicales spéciales, il ne faut pas administrer certains vaccins à certaines personnes, ou alors elles doivent attendre un peu. Si vous n’êtes pas sûr de savoir si vous ou votre enfant devez avoir un vaccin en particulier, parlez-en à votre agent de santé."
+    },
+    {
+        "title" : "Comment les vaccins sont-ils mis au point ?",
+        "label" : "info",
+        "text" : "Comme tout médicament, chaque vaccin doit faire l’objet d’essais exhaustifs et rigoureux pour s’assurer de son innocuité avant son introduction dans un pays. Un vaccin expérimental est d’abord testé chez l'animal. Il est ensuite testé dans le cadre d'essais cliniques chez l'être humain. Puis, il faut faire d'autres démarches, dont des examens de l’efficacité, de l’innocuité et de la fabrication pour obtenir les autorisations réglementaires."
+    },
+    {
+        "title" : "Pourquoi me faire vacciner ?",
+        "label" : "info",
+        "text" : "Les vaccins nous protègent tout au long de la vie, à partir de la naissance, dans l’enfance, l’adolescence et jusqu’à la vieillesse. Dans la plupart des pays, nous recevons une fiche ou un carnet de vaccination nous disant les vaccins que nous ou nos enfants avons eus et les dates des prochains vaccins ou rappels. Il est important de rester à jour de toutes les vaccinations."
+    },
+    {
+        "title" : "Qu'y a-t-il dans un vaccin ?",
+        "label" : "info",
+        "text" : "Tous les composants jouent un rôle important. On y trouve: - L’antigène. Il s’agit d’une forme inactivée ou affaiblie d’un germe, virus ou bactérie. - Les adjuvants, qui aident à renforcer la réponse immunitaire. - Les conservateurs, qui aident à maintenir l’efficacité du vaccin. - Les stabilisateurs, qui protègent le vaccin pendant le stockage et le transport."
+    },
+    {
+        "title" : "Que faire si j'ai encore des questions ?",
+        "label" : "Où",
+        "text" : "Si vous avez des questions sur les vaccins, parlez-en avec un agent de santé qui pourra vous donner des conseils scientifiques sur la vaccination pour vous et votre famille, notamment sur le calendrier de vaccination recommandé dans votre pays. En recherchant des informations en ligne sur les vaccins, assurez-vous de ne consulter que des sources fiables (www.vaccinesafetynet.org)."
+    }
+]
