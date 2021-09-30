@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FiMapPin, FiChevronDown } from "react-icons/fi";
+import { Link } from 'react-router-dom';
 import cities from '../../../assets/others/cities.json';
 import headerImage from '../../../assets/images/headerImage.svg';
 
@@ -15,6 +16,7 @@ const Header = ({ handleCityChoice }) => {
 
     const handleSubmit = (city) => {
         setSearchCity(city.name + " " + city.zip_code)
+        handleCityChoice(city);
         setDisplayChoiceCities(false);
     };
 
@@ -40,7 +42,9 @@ const Header = ({ handleCityChoice }) => {
                             {filteredCities.length > 0 ? 
                             
                             filteredCities.map((citie, index) => (
-                                <li key={index} className="py-2 border-b border-grey font-marianne cursor-pointer" onClick={() => handleSubmit(citie)}>{citie.name} {citie.zip_code}</li>
+                                <Link key={index} to="/vaccination">
+                                    <li  className="py-2 border-b border-grey font-marianne cursor-pointer" onClick={() => handleSubmit(citie)}>{citie.name} {citie.zip_code}</li>
+                                </Link>
                             ))
                             : <p>Aucune ville trouvée</p>}   
                         </ul>

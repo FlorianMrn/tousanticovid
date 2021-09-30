@@ -58,7 +58,6 @@ const Actualites = () => {
 
     };
 
-    console.log(carrousel.end ,  filteredArticles.length)
 
     return (
         <section className="w-full min-h-screen flex flex-wrap justify-center md:justify-around items-center lg:flex-col">
