@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Footer = () => {
 
     return (
-        <footer style={{height : "250px"}} className="w-full mt-16">
+        <footer style={{height : "250px"}} className="w-full mt-16 relative z-30">
             <div className="w-full h-3/4 bg-blue-info">
                 <div className="w-full px-8 max-w-screen-lg h-full flex m-auto justify-between items-center">
                     <img src={logo_republique} alt="République" className="h-2/4"/>

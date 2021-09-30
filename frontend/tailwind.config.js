@@ -10,7 +10,8 @@ module.exports = {
         DEFAULT: '#1E1E1E'
       },
       grey: {
-        DEFAULT: '#7F7F7F'
+        DEFAULT: '#7F7F7F',
+        light: "#D3D3D3"
       },
       transparent: {
         DEFAULT: 'transparent'
