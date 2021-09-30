@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import Faq from './components/Faq';
 import Vaccination from './components/Vaccination';
 import Strategie from './components/Strategie';
+import Administration from './components/Administration';
 import JeSuisSolidaire from './components/JeSuisSolidaire';
 
 function App() {
@@ -29,6 +30,8 @@ function App() {
         </Route>
         <Route exact path="/strategie-vaccinale" component={Strategie} />
         <Route exact path="/je-suis-solidaire" component={JeSuisSolidaire} />
+        <Route path="/administration" component={Administration} />
+        <Route component={Home} />
       </Switch>
       <Footer />
     </div>

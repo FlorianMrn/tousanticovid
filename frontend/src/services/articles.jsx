@@ -1,13 +1,15 @@
 import axios from "axios";
 
-export async function getArticles(setter) {
-    axios.get(`${process.env.REACT_APP_BASE_URL}articles/`)
-        .then(function (response) {
-            return setter(response.data);
-        })
-        .catch(function (error) {
-            console.error(error);
-        });
+export async function getArticles() {
+
+    try {
+        const response = await axios.get(`${process.env.REACT_APP_BASE_URL}articles/`);
+        return response;
+        
+    } catch (error) {
+        console.error(error)
+    }
+   
 };
 
 export async function getDiffHoursAndDays(dataDate) {
