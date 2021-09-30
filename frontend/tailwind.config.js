@@ -20,6 +20,7 @@ module.exports = {
         click: '#000091',
         inactif: '#869ECE',
         info : '#0762C8',
+        light : '#417DC4',
       },
       red: {
         DEFAULT: '#E1000F',
@@ -47,7 +48,17 @@ module.exports = {
       backgroundImage: {
         'drapeau': "url('./assets/images/drapeau.svg')",
         'drapeauMob': "url('./assets/images/drapeauMob.svg')",
-       }
+      },
+      animation: {
+        gradientx:'gradientx 15s ease infinite',
+      },
+      keyframes: {
+        gradientx: {
+            '0%': { backgroundPosition: '0% 50%'},
+            '50%': { backgroundPosition: '100% 50%'},
+            '100%': { backgroundPosition: '0% 50%'}
+        }
+      },
     }
   },
   variants: {

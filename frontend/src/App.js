@@ -5,10 +5,12 @@ import Home from './components/Home';
 import Footer from './components/Footer';
 import Faq from './components/Faq';
 import Vaccination from './components/Vaccination';
+import Strategie from './components/Strategie';
+import JeSuisSolidaire from './components/JeSuisSolidaire';
 
 function App() {
 
-  const [cityChoice, setCityChoice] = useState("");
+  const [cityChoice, setCityChoice] = useState({});
 
   const handleCityChoice = (value) => {
     setCityChoice(value)
@@ -17,6 +19,7 @@ function App() {
   return (
     <div className="App relative">
       <Nav />
+      <Switch>
         <Route exact path="/">
           <Home handleCityChoice={handleCityChoice}/>
         </Route>
@@ -24,6 +27,9 @@ function App() {
         <Route exact path="/vaccination">
           <Vaccination cityChoice={cityChoice}/>
         </Route>
+        <Route exact path="/strategie-vaccinale" component={Strategie} />
+        <Route exact path="/je-suis-solidaire" component={JeSuisSolidaire} />
+      </Switch>
       <Footer />
     </div>
   );
