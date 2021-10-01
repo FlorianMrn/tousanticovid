@@ -10,14 +10,17 @@ export const axiosInstance = axios.create({
     }
 });
 
-axiosInstance.interceptors.response.use(response => response, error  => {
+axiosInstance.interceptors.response.use(response => {
+    
+    return response 
+    }, async function (error) {
     
     const originalRequest = error.config;
+    const refresh_token = localStorage.getItem('refresh_token');
 
-    if (error.response.status === 401 && error.response.statusText === "Unauthorized") {
-        const refresh_token = localStorage.getItem('refresh_token');
+    if (error.response.status === 401 && error.response.statusText === "Unauthorized" && refresh_token) {
 
-        return axiosInstance
+            return axiosInstance
             .post('token/refresh/', {refresh : refresh_token})
             .then((response) => {
 
@@ -30,9 +33,9 @@ axiosInstance.interceptors.response.use(response => response, error  => {
                 return axiosInstance(originalRequest);
             })
             .catch((error) => {
-                console.error(error);
+                return console.error("olla", error);
             });
     }
 
-    return Promise.reject(error);
+    return Promise.reject("error", error);
 });

@@ -1,17 +1,19 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { AiOutlineClose, AiFillHome, AiFillPlusCircle, AiFillMinusCircle, AiOutlineMenu } from "react-icons/ai";
+import { logout } from "../../../../services/auth";
 
 const Menu = () => {
 
     const [open, setOpen] = useState(false);
+    const history = useHistory();
 
     const handleOpen = () => {
         setOpen(prevState => !prevState);
     };
 
     const handleDeco = () => {
-        console.log('déconexion');
+        logout(history);
     };
 
     return (

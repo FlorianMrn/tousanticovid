@@ -8,6 +8,8 @@ import Vaccination from './components/Vaccination';
 import Strategie from './components/Strategie';
 import Administration from './components/Administration';
 import JeSuisSolidaire from './components/JeSuisSolidaire';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
 
@@ -34,6 +36,17 @@ function App() {
         <Route component={Home} />
       </Switch>
       <Footer />
+      <ToastContainer
+        position="bottom-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
     </div>
   );
 }

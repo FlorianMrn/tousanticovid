@@ -30,6 +30,9 @@ module.exports = {
       green: {
         success: '#008941',
       },
+      orange: {
+        DEFAULT: '#FF9575',
+      },
     },
     fontFamily: {
       marianne: "'Marianne'"

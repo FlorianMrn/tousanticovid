@@ -58,6 +58,7 @@ const Actualites = () => {
 
     };
 
+    console.log(filteredArticles[0])
 
     return (
         <section className="w-full min-h-screen flex flex-wrap justify-center md:justify-around items-center lg:flex-col">
@@ -78,11 +79,11 @@ const Actualites = () => {
                         <button onClick={handleCarr} className={`absolute z-50 left-0 top-1/2 transform -translate-y-1/2 ${carrousel.start === 0  ? "text-blue-inactif disabled" : "text-blue"}`}>
                             <FiChevronLeft id="left" size={40} />
                         </button>
-                        <button onClick={handleCarr} className={`absolute z-50 right-0 top-1/2 transform -translate-y-1/2 ${carrousel.end === filteredArticles.length + 1  ? "text-blue-inactif disabled" : "text-blue"}`}>
+                        <button onClick={handleCarr} className={`absolute z-50 right-0 top-1/2 transform -translate-y-1/2 ${articles && carrousel.end === filteredArticles.length + 1  ? "text-blue-inactif disabled" : "text-blue"}`}>
                             <FiChevronRight id="right" size={40} />
                         </button>
                         <div className="grid grid-cols-2 grid-rows-2 gap-8 auto-rows-fr grid-flow-row border-block flex-1">
-                            {articles.length > 0 && filteredArticles.slice(carrousel.start, carrousel.end).map((article, index) => (
+                            {(articles && articles.length > 0) && filteredArticles.slice(carrousel.start, carrousel.end).map((article, index) => (
                                 <div key={index} style={{minHeight: "250px", maxHeight: "300px"}} className="bg-white shadow-2xl rounded relative cursor-pointer" onClick={() => handleDisplayActualite(article)}>
                                     <img style={{maxHeight: "40%"}}src={article.imageFile} alt="Article" className=" w-full object-cover rounded-t"/>
                                     <div className="p-2 w-full">
