@@ -36,10 +36,11 @@ const Vaccination = ({ cityChoice }) => {
                
                 centersFiltered.map((center, index) => {
 
-                    if (center.properties.rdv_tel) {
-                        return center.properties.rdv_tel.startsWith('+') ? center.properties.rdv_tel.split(" ").join("") : center.properties.rdv_tel = "" + center.properties.rdv_tel.split(" ").join("");
+                    if (!center.properties.rdv_tel) {
+                        return false;
                     }
-                    return;
+
+                    return center.properties.rdv_tel.startsWith('+') ? center.properties.rdv_tel.split(" ").join("") : center.properties.rdv_tel = "" + center.properties.rdv_tel.split(" ").join("");
                 })
                 centersFiltered.sort((a, b) => a.distance - b.distance);
                 return setFilteredCenters(centersFiltered);

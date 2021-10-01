@@ -1,9 +1,8 @@
-import { useState, useEffect } from "react";
 import infosData from '../../assets/others/infos.json';
 
 const Faq = () => {
-    const infos = infosData;
 
+    const infos = infosData;
 
     return (
         <section className="w-full max-w-screen-xl min-h-screen bg-white pt-40 px-4 m-auto">
