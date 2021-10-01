@@ -46,7 +46,7 @@ const Actualites = () => {
 
         if (searchActualite) {
             return a.text.toLowerCase().includes(searchActualite.toLowerCase()) ||
-                a.title.toLowerCase().includes(searchActualite.toLowerCase()) && a.published === true;
+                (a.title.toLowerCase().includes(searchActualite.toLowerCase()) && a.published === true);
         }
 
         return a.published === true;
